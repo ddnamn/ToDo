@@ -37,13 +37,13 @@ export default function HomePage() {
    return (
       <>
          <div className="h-[100vh] flex justify-center items-center flex-col gap-2 bg-slate-200">
-            <h1 className="font-bold text-4xl text-green-500 cursor-default"> TODO LIST 📝 </h1>
+            <h1 className="font-bold text-4xl text-green-500 cursor-default "> TODO LIST 📝 </h1>
 
             <ul className="list-disc  ">
                {/* try to split code */}
                {/* {todo.map((task:ITask,key:number )=><TodoTask task={task} key={key} />)} */}
 
-               {todos.map((todo:ITask)=><li key={todo.id} onClick={()=>toggle(todo.id)} className={!todo.status?'line-through ':''}>{todo.text}</li>) }
+               {todos.map((todo:ITask)=><li key={todo.id} onClick={()=>toggle(todo.id)} className={!todo.status?'line-through text-red-500 ':''}>{todo.text}</li>) }
 
    
             </ul>
@@ -51,7 +51,7 @@ export default function HomePage() {
             {/* <AddButton/> */}
             <div className="flex gap-4 mt-4">
                <input value={task} type="text" placeholder="add todo..." className="border-b-2 border-b-slate-400 h-8 bg-black bg-opacity-5   px-3  focus:outline-none" onChange={changeHandler}/>
-               <button className="h-8 bg-green-400 w-20 p-2 rounded-lg hover:bg-green-500 flex items-center justify-center font-bold"  onClick={addHandler}>ADD</button>
+               <button className="outline-black outline text-black hover:text-white hover:outline-white h-8 bg-green-400 w-20 p-2 rounded-lg hover:bg-green-600 flex items-center justify-center font-bold"  onClick={addHandler}>ADD</button>
             </div> 
          </div>
      </>

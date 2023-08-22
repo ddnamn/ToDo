@@ -4,6 +4,6 @@
 
 @layer base {
    li {
-      @apply cursor-pointer my-2
+      @apply cursor-pointer my-2 hover:text-orange-400
    }
 }
