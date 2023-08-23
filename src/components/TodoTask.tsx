@@ -1,6 +1,15 @@
+  import { ITask } from "../interfaces/HomeInterfaces";
 
-export default function TodoTask() {
-  return (
-    <li>TodoTask</li>
-  )
-}
+  type data = {
+  
+    value:ITask
+  }
+
+  export default function TodoTask({value}:data) {
+   
+    return (
+      <>
+        <p >{value.text}</p>
+      </>
+    )
+  }

@@ -4,6 +4,6 @@
 
 @layer base {
    li {
-      @apply cursor-pointer my-2 hover:text-orange-400
+      @apply cursor-pointer my-2 hover:bg-slate-400 hover:text-white flex w-52 bg-slate-300 rounded-xl items-center justify-around
    }
 }

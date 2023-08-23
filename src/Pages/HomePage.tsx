@@ -1,8 +1,8 @@
 
 import { useState,ChangeEvent } from "react"
 import { ITask } from "../interfaces/HomeInterfaces"
+import TodoTask from "../components/TodoTask"
 // import AddButton from "../components/AddButton"
-// import TodoTask from "../components/TodoTask"
 
 
 export default function HomePage() {
@@ -39,20 +39,22 @@ export default function HomePage() {
          <div className="h-[100vh] flex justify-center items-center flex-col gap-2 bg-slate-200">
             <h1 className="font-bold text-4xl text-green-500 cursor-default "> TODO LIST 📝 </h1>
 
-            <ul className="list-disc  ">
+            <ul >
+               
+               {/* {todos.map((todo:ITask)=><li key={todo.id}  className={!todo.status?'line-through text-red-500 ':''}>{todo.text} <p onClick={()=>toggle(todo.id)}>✅</p></li>) } */}
                {/* try to split code */}
-               {/* {todo.map((task:ITask,key:number )=><TodoTask task={task} key={key} />)} */}
-
-               {todos.map((todo:ITask)=><li key={todo.id} onClick={()=>toggle(todo.id)} className={!todo.status?'line-through text-red-500 ':''}>{todo.text}</li>) }
-
-   
+               {todos.map((todo:ITask)=><li key={todo.id} onClick={()=>toggle(todo.id)}  className={!todo.status?'bg-slate-400 text-red-500 hover:text-red-500 ':''} ><TodoTask  value={todo}/></li>)}
             </ul>
 
-            {/* <AddButton/> */}
+ 
             <div className="flex gap-4 mt-4">
                <input value={task} type="text" placeholder="add todo..." className="border-b-2 border-b-slate-400 h-8 bg-black bg-opacity-5   px-3  focus:outline-none" onChange={changeHandler}/>
                <button className="outline-black outline text-black hover:text-white hover:outline-white h-8 bg-green-400 w-20 p-2 rounded-lg hover:bg-green-600 flex items-center justify-center font-bold"  onClick={addHandler}>ADD</button>
             </div> 
+
+
+            {/* try to split code */}
+            {/* <AddButton/> */}
          </div>
      </>
    )
