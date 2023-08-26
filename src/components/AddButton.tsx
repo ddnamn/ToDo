@@ -1,4 +1,8 @@
+// import { HtmlHTMLAttributes } from "react"
 
+// type TAction = {
+//    e : eventMouse<HtmlHTMLAttributes>
+// }
 // export default function AddButton() {
 //   return (
 //    <div className="flex gap-4 mt-4">

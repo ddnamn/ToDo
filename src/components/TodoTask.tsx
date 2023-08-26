@@ -1,11 +1,7 @@
-  import { ITask } from "../interfaces/HomeInterfaces";
 
-  type data = {
-  
-    value:ITask
-  }
+import { ITodo } from "../interfaces/TodoInterface";
 
-  export default function TodoTask({value}:data) {
+  export default function TodoTask({value}:ITodo) {
    
     return (
       <>

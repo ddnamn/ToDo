@@ -40,9 +40,8 @@ export default function HomePage() {
             <h1 className="font-bold text-4xl text-green-500 cursor-default "> TODO LIST 📝 </h1>
 
             <ul >
-               
                {/* {todos.map((todo:ITask)=><li key={todo.id}  className={!todo.status?'line-through text-red-500 ':''}>{todo.text} <p onClick={()=>toggle(todo.id)}>✅</p></li>) } */}
-               {/* try to split code */}
+               
                {todos.map((todo:ITask)=><li key={todo.id} onClick={()=>toggle(todo.id)}  className={!todo.status?'bg-slate-400 text-red-500 hover:text-red-500 ':''} ><TodoTask  value={todo}/></li>)}
             </ul>
 
@@ -54,7 +53,7 @@ export default function HomePage() {
 
 
             {/* try to split code */}
-            {/* <AddButton/> */}
+            {/* <AddButton onClick={addHandler}/> */}
          </div>
      </>
    )
