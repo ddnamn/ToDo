@@ -11,16 +11,15 @@ export default function HomePage() {
    { id: 2, text: "belajar", status: true },
    { id: 3, text: "ngoding", status: false },])
 
-// get text 
-   const changeHandler =(e:ChangeEvent<HTMLInputElement>) =>{
-      setTask(e.target.value)
+// get text ~
+   const changeHandler =({target}:{target:{value:string}}) =>{
+      setTask(target.value)
    }
    // add task
    const addHandler = ():void=>{   
       const newTask = {id:todos.length+1,text:task,status:true}
       setTodos([...todos,newTask])
       setTask('')
-      console.table(todos)
    }
 // mark as done 
    const toggle = (id:number)=>{
